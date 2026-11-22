@@ -1,5 +1,9 @@
 # وَثِيق (Wathiq) — Enterprise Document ETL & Hybrid RAG Engine
 
+**Live Interactive Demo:** [https://wathiq-rag.surge.sh](https://wathiq-rag.surge.sh)
+
+> **Dual-Mode Workbench Architecture:** The static demo hosted on Surge runs an **In-Browser Edge Engine** (`MODE: SURGE EDGE ENGINE`) implementing Saudi PDPL PII masking, prompt/SQL injection guardrails, Mozilla `pdf.js` page-by-page extraction, Arabic normalization, SHA-256 deduplication (`crypto.subtle`), 256-dim n-gram vector embeddings, and Okapi BM25 + Dense Cosine RRF (`k=60`) directly in the browser. Running the repository locally or via Docker connects the identical UI (`API: FASTAPI ONLINE`) to the **FastAPI + PyMuPDF + SQLite WAL / PostgreSQL 16 `pgvector` Backend**.
+
 **Wathiq** is a production-structured bilingual (Arabic + English) Document ETL & Hybrid Retrieval-Augmented Generation (RAG) engine built with **FastAPI**, **PyMuPDF**, **NumPy**, **SQLite WAL**, and a ready-to-deploy **PostgreSQL 16 + pgvector (HNSW)** schema.
 
 It combines **Saudi PDPL PII masking**, **prompt/SQL injection guardrails**, **SHA-256 deduplication**, **Arabic text normalization**, **Okapi BM25 + Dense Cosine Similarity fused via Reciprocal Rank Fusion (RRF)**, **grounded citation synthesis**, and **immutable audit telemetry**.
